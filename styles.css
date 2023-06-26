@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+a.link {
+    text-decoration: none;
+    color: #1b4ac0;
+}
+
+a.link:hover {
+    text-decoration: underline;
+    color: #1945b4;
+}
+
+.btn {
+    border: none;
+    background-color: rgb(75, 181, 246);
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 25px;
+    border-radius: 250px;
+    margin: 20px;
+    transition: background-color 150ms ease-in-out;
+}
+
+.btn:hover {
+    background-color: rgb(37, 171, 253);
+}
+
+.bold {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 27px;
+}
+
+.nav-bar-centered {
+    width: 100%;
+    height: fit-content;
+    margin: auto 75px;
+}
+
+.nav-bar-logo {
+    max-height: 50px;
+    display: inline;
+    margin-right: 150px;
+    padding: 5px 0px;
+}
+
+.nav-bar-links-container {
+    display: inline;
+    float: right;
+    line-height: 60px;
+}
+
+.nav-bar-a-tag {
+    all: unset;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 30px;
+}
+
+.nav-bar-a-tag:hover {
+    color: #10289d;
+}
+
+/* Home intro section */
+#home-intro-container {
+    display: flex;
+    flex-direction: row;
+}
+
+#home-intro-img {
+    flex: 1;
+    min-height: 500px;
+    background-image: url(images/bigstock-snowy-mountain-tops-in-alaska-11882624.jpg);
+    background-size: cover;
+}
+
+#home-intro-text {
+    flex: 1;
+    background-color:#1b4ac0;
+    background: linear-gradient(to right, #10289d, #1e69da);
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: center;
+
+}
+
+.home-intro-h1 {
+    color: azure;
+}
+
+.home-intro-p {
+    color: azure;
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 20px;
+    line-height: 1.3rem ;
+}
+
+/* Introduction home page */
+#introduction-div {
+    padding: 60px 0;
+}
+
+#intro-h2-home {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#intro-h4-home {
+    max-width: 800px;
+    font-size: 18px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#intro-boxes {
+    width: 100%;
+    height: fit-content;
+    margin-top: 50px;
+}
+
+.intro-box {
+    max-width: 1000px;
+    margin: 50px auto;
+    display: flex;
+}
+
+.intro-box-square {
+    flex: 1;
+    width: 50%;
+}
+
+.intro-box-square-inner-text-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.intro-box-square-h5 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.intro-box-square-p {
+    margin-bottom: 7px;
+}
+
+.intro-box-square-inner-img-container {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.intro-box-square-img {
+    width: 400px;
+    height: 265px; 
+    border-radius: 25px;
+}
+
+#home-division-img-container {
+    width: 100%;
+    height: 800px;
+    background-image: url(images/nature_picture_4.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Contact form - Home page */
+#contact-form-outer-container {
+    display: flex;
+    justify-content: center;
+}
+
+#contact-form-container {
+    height: fit-content;
+    max-width: 700px;
+    margin-top: 75px;
+    margin-bottom: 100px;
+    padding: 30px 0;
+    background-color: lightblue;
+    box-shadow: 0px 0px 20px 10px rgba(32, 13, 114, 0.15);
+    display: inline-block;
+}
+
+#contact-form-h3 {
+    font-size: 30px;
+    margin: 25px 45px;
+}
+
+.contact-form-input {
+    border: none;
+    height: 2rem;
+    max-width: 440;
+    width: calc(100% - 90px);
+    margin: 0 45px 30px 45px;
+    padding-left: 5px;
+    text-indent: 5px;
+}
+
+.contact-form-input:focus {
+    outline: none;
+    border-bottom: solid #10289d 3px;
+}
+
+.contact-form-input::placeholder {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+#contact-form-textarea {
+    resize: none;
+    height: 100px;
+    padding-top: 10px;
+}
+
+#contact-form-btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#contact-form-btn {
+    width: calc(100% - 200px);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
