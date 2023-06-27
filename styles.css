@@ -21,7 +21,7 @@ a.link:hover {
 
 .btn {
     border: none;
-    background-color: rgb(75, 181, 246);
+    background-color: #ff7f50;
     color: rgb(255, 255, 255);
     font-size: 16px;
     font-weight: 500;
@@ -32,7 +32,12 @@ a.link:hover {
 }
 
 .btn:hover {
-    background-color: rgb(37, 171, 253);
+    background-color: #ff8f66;
+}
+
+.btn:active {
+    box-shadow: 0px 0px 20px 10px rgba(32, 13, 114, 0.25);
+    background-color: #e73a1c;
 }
 
 .bold {
@@ -142,17 +147,54 @@ a.link:hover {
 }
 
 .intro-box-square-inner-text-container {
-    max-width: 400px;
+    width: 400px;
     margin: 0 auto;
+    height: 269px;
+    border-radius: 25px;
+    box-shadow: 15px 15px 40px 0px rgba(0, 0, 0, .08);
+    background-color: rgba(255, 255, 255, .9);
+    transition: width 200ms ease-in-out, height 200ms ease-in-out, position 200ms;
+}
+
+.intro-box-square-inner-text-container:hover {
+    position: absolute;
+    width: 650px;
+    height: 400px;
+    z-index: 100;
+    opacity: 1;
+}
+
+.intro-box-square-inner-text-container:hover > .intro-box-square-h5 {
+    font-size: 38px;
+}
+
+.intro-box-square-inner-text-container:hover > .intro-box-square-p {
+    font-size: 24px;
+}
+
+.intro-box-square-inner-text-container:hover > a.link {
+    font-size: 24px;
 }
 
 .intro-box-square-h5 {
     font-size: 24px;
+    padding-top: 20px;
+    padding-left: 20px;
     margin-bottom: 10px;
+    transition: font-size 200ms;
 }
 
 .intro-box-square-p {
+    padding-left: 20px;
+    padding-right: 20px;
     margin-bottom: 7px;
+    transition: font-size 200ms;
+}
+
+.intro-box-square-inner-text-container > a {
+    padding-left: 20px;
+    padding-bottom: 20px;
+    transition: font-size 200ms;
 }
 
 .intro-box-square-inner-img-container {
@@ -164,6 +206,7 @@ a.link:hover {
     width: 400px;
     height: 265px; 
     border-radius: 25px;
+    box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, .35);
 }
 
 #home-division-img-container {
@@ -186,8 +229,8 @@ a.link:hover {
     margin-top: 75px;
     margin-bottom: 100px;
     padding: 30px 0;
-    background-color: lightblue;
-    box-shadow: 0px 0px 20px 10px rgba(32, 13, 114, 0.15);
+    background-color: #f5f5f5;
+    box-shadow: 5px 5px 20px 10px rgba(32, 13, 114, 0.15);
     display: inline-block;
 }
 
@@ -232,4 +275,8 @@ a.link:hover {
     width: calc(100% - 200px);
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+#contact-form-btn:active {
+    box-shadow: 0px 0px 15px 10px rgba(32, 13, 114, 0.15);
 }
