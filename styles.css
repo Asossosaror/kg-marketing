@@ -19,7 +19,7 @@ a.link:hover {
     color: #1945b4;
 }
 
-.nav-bar-a-tag.green {
+.nav-bar-a-tag.blue {
     color: #10289d;
 }
 
@@ -90,38 +90,40 @@ a.link:hover {
 }
 
 /* Home intro section */
-#home-intro-container {
+.intro-container {
     display: flex;
     flex-direction: row;
 }
 
-#home-intro-img {
+.intro-half.img {
     flex: 1;
     min-height: 500px;
-    background-image: url(images/bigstock-snowy-mountain-tops-in-alaska-11882624.jpg);
     background-size: cover;
 }
 
-#home-intro-text {
+#home-intro-img {
+    background-image: url(images/bigstock-snowy-mountain-tops-in-alaska-11882624.jpg);
+}
+
+.intro-half.text {
     flex: 1;
     background-color:#1b4ac0;
     background: linear-gradient(to right, #10289d, #1e69da);
     padding-top: 100px;
     padding-bottom: 100px;
     text-align: center;
-
 }
 
 .home-intro-h1 {
     color: azure;
 }
 
-.home-intro-p {
+.intro-p {
     color: azure;
     max-width: 700px;
     margin: 0 auto;
     margin-top: 20px;
-    line-height: 1.3rem ;
+    line-height: 1.3rem;
 }
 
 /* Introduction home page */
@@ -360,4 +362,63 @@ a.link:hover {
 
 .bottom-btn-container > p {
     padding-top: 10px;
+}
+
+
+
+/* Contact us-page */
+/* Intro section */
+#contact-us-intro-img {
+    background-image: url(images/bigstock-snowy-mountain-tops-in-alaska-11882624.jpg);
+}
+
+.intro-half.text > h1 {
+    color: azure;
+}
+
+
+
+/* About us-page */
+/* Intro section */
+#about-us-intro-img {
+    background-image: url(images/bigstock-snowy-mountain-tops-in-alaska-11882624.jpg);
+}
+
+/* Timeline */
+#timeline-container {
+    display: grid;
+    place-items: center;
+}
+
+#timeline-container > h1 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin: 0 auto;
+}
+
+#timeline-grid-container {
+    display: grid;
+    grid-template-columns: 500px 50px 500px;
+    row-gap: 10px;
+    column-gap: 70px;
+    margin: 0 auto;
+}
+
+.timeline-grid-box {
+    height: 400px;
+}
+
+.grid-box-img-container img {
+    width: 90%;
+    border-radius: 20px;
+}
+
+#timeline-grid-column-middle {
+    width: 50px;
+}
+
+.timeline-line {
+    width: 2px;
+    background-color: black;
+    left: calc(50% - 1px);
 }
