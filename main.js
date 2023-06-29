@@ -1,5 +1,6 @@
 const navBar = document.querySelector('.nav-bar');
 const main = document.querySelector('main');
+const icon = document.querySelector('.menu-icon');
 
 // Make the navigationg bar slightly transparent when it is scrolled down from it's original state.
 window.addEventListener('scroll', () => {
@@ -24,3 +25,8 @@ function scrollToTop() {
 function goTo(href) {
     location.href = href;
 }
+
+// Toggle the class 'clicked' on the 'menu-icon' to initialize the animation.
+icon.addEventListener('click', () => {
+    icon.classList.toggle("clicked");
+});
