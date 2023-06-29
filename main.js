@@ -19,3 +19,8 @@ function scrollToTop() {
         behavior: "smooth",
     });
 }
+
+// This function redirects to another page.
+function goTo(href) {
+    location.href = href;
+}

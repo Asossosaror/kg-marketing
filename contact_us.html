@@ -18,20 +18,107 @@
             <div class="nav-bar">
                 <img class="nav-bar-logo" src="images/logo.png" alt="Logotyp">
                 <nav class="nav-bar-links-container">
-                    <span><a class="nav-bar-a-tag" href="#">Home</a></span>
-                    <span><a class="nav-bar-a-tag blue" href="#">Contact us</a></span>
-                    <span><a class="nav-bar-a-tag" href="#">About us</a></span>
+                    <span><a class="nav-bar-a-tag" href="index.html">Hem</a></span>
+                    <span><a class="nav-bar-a-tag blue" href="#">Kontakta oss</a></span>
+                    <span><a class="nav-bar-a-tag" href="about_us.html">Om oss</a></span>
                 </nav>
             </div>
         </header>
+
         <div id="contact-us-intro-container" class="intro-container">
             <div class="intro-half img" id="contact-us-intro-img"></div>
             <div class="intro-half text" id="contact-us-intro-text">
                 <h1>Contact us</h1>
                 <p class="bold intro-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam unde deserunt enim itaque illum facere expedita, similique esse dolores, aperiam velit fugit officia dolore et ipsa eius tenetur quas doloribus!</p>
-                <button class="btn">Om oss</button>
+                <button class="btn" onclick="goTo('about_us.html')">Om oss</button>
             </div>
         </div>
+
+        <div id="contact-us-grid-container">
+            <div id="contact-us-grid">
+                <div class="contact-us-grid-half" id="contact-us-grid-left-half">
+                    <div id="grid-contact-info-container">
+                        <h2>Kontaktuppgifter</h2>
+                        <p id="contact-us-long-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse mollitia tenetur animi. Sequi autem aliquam amet saepe ipsam? Labore eius fugiat harum illo! Reprehenderit non animi, dicta ea rerum eius. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <p>Eum libero placeat tempora, sequi molestias nobis temporibus aut, architecto debitis qui, beatae consequuntur!</p>
+                        <div id="contact-us-info-inner-container">
+                            <div id="contact-us-info-inner-grid">
+                                <div class="contact-us-info-inner-grid-half">
+                                    <h3>Kontakta oss</h3>
+                                    <p>Telefonnummer: 072-022 15 39</p>
+                                    <p>E-mail: assar.grimlund@gmail.com</p>
+                                </div>
+                                <div class="contact-us-info-inner-grid-half">
+                                    <h3>Besök oss</h3>
+                                    <p>Adress: Skogsklockevägen 8</p>
+                                    <p>Postnummer: 181 57</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-us-grid-half" id="contact-us-grid-right-half">
+                    <form>
+                        <input class="contact-us-form-input" type="text" placeholder="Namn">
+                        <input class="contact-us-form-input" type="text" placeholder="Företagsnamn">
+                        <input class="contact-us-form-input" type="text" placeholder="E-mail">
+                        <textarea id="contact-us-form-textarea" class="contact-us-form-input" cols="40" rows="4" placeholder="Meddelande..."></textarea>
+                    </form>
+                    <div id="contact-us-form-btn-container">
+                        <button class="btn">Skicka</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="contact-us-coworkers-outer-container">
+            <h3>Medarbetare</h3>
+            <div id="contact-us-coworkers-container">
+                <div class="contact-us-coworker-box">
+                    <div class="personal-img-container">
+                        <img src="images/QFagIN.webp" alt="Medarbetare">
+                    </div>
+                    <div class="personal-info-container">
+                        <h5 class="personal-info-name">Assar Grimlund</h5>
+                        <p class="personal-info-title">Co-founder</p>
+                        <p class="personal-info-email light">assar.grimlund@gmail.com</p>
+                        <p class="personal-info-phone light">072-022 15 39</p>
+                    </div>
+                </div>
+                <div class="contact-us-coworker-box">
+                    <div class="personal-img-container">
+                        <img src="images/pexels-photo-268533.webp" alt="Medarbetare">
+                    </div>
+                    <div class="personal-info-container">
+                        <h5 class="personal-info-name">Malcolm Kullring</h5>
+                        <p class="personal-info-title">Co-founder</p>
+                        <p class="personal-info-email light">malcolm.kullring@gmail.com</p>
+                        <p class="personal-info-phone light">072-022 15 39</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-content-container">
+                <div class="footer-content">
+                    <h3>KG Marketing AB</h3>
+                    <div class="footer-content-location">
+                        <p>Skogsklockevägen 8</p>
+                        <p>181 57 Lidingö</p>
+                    </div>
+                    <div class="footer-content-contact">
+                        <p>assar.grimlund@gmail.com</p>
+                        <p>072-022 15 39</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-division-line"></div>
+            <div class="bottom-btn-container">
+                <a id="footer-arrow-a" onclick="scrollToTop()"><img src="images/angle-up-solid-green.svg" alt="Pil uppåt" id="footer-arrow"></a>
+                <p>Skapad av Assar Grimlund</p>
+            </div>
+        </footer>
     </main>
 </body>
 </html>

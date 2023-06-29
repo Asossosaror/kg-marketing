@@ -78,6 +78,10 @@ a.link:hover {
     padding-right: 50px;
 }
 
+.nav-bar-links-container > span:hover {
+    cursor: pointer;
+}
+
 .nav-bar-a-tag {
     all: unset;
     font-size: 20px;
@@ -374,6 +378,156 @@ a.link:hover {
 
 .intro-half.text > h1 {
     color: azure;
+}
+
+/* Contact grid */
+
+#contact-us-grid-container {
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+#contact-us-grid {
+    display: grid;
+    grid-template-columns: 800px 400px;
+    column-gap: 100px;
+    width: fit-content;
+}
+
+.contact-us-grid-half {
+    min-height: 400px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    padding: 30px 0;
+    box-shadow: 5px 5px 20px 10px rgba(32, 13, 114, 0.15);
+}
+
+#grid-contact-info-container {
+    margin: 20px 40px;
+}
+
+#grid-contact-info-container > h2 {
+    padding-bottom: 15px;
+}
+
+#grid-contact-info-container > p {
+    padding-bottom: 40px;
+    line-height: 1.5rem;
+}
+
+p#contact-us-long-text {
+    padding-bottom: 15px;
+}
+
+#contact-us-info-inner-grid {
+    display: grid;
+    grid-template-columns: 350px 250px;
+    column-gap: 20px;
+}
+
+.contact-us-info-inner-grid-half > h3 {
+    padding-bottom: 10px;
+}
+
+.contact-us-info-inner-grid-half > p {
+    padding-bottom: 4px;
+}
+
+.contact-us-form-input {
+    border: none;
+    height: 2rem;
+    max-width: 400;
+    width: calc(100% - 90px);
+    margin: 0 45px 30px 45px;
+    padding-left: 5px;
+    text-indent: 5px;
+}
+
+.contact-us-form-input:focus {
+    outline: none;
+    border-bottom: solid #10289d 3px;
+}
+
+.contact-us-form-input::placeholder {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+#contact-us-form-textarea {
+    resize: none;
+    height: 100px;
+    padding-top: 10px;
+}
+
+#contact-us-form-btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#contact-us-form-btn-container > button {
+    width: calc(100% - 150px);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0;
+}
+
+/* Coworkers */
+#contact-us-coworkers-outer-container > h3 {
+    font-size: 45px;
+    margin: 0 auto;
+    width: fit-content;
+    padding-top: 75px;
+    padding-bottom: 60px;
+}
+
+#contact-us-coworkers-container {
+    display: grid;
+    grid-template-columns: 300px 300px;
+    column-gap: 100px;
+    width: fit-content;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+
+.contact-us-coworker-box {
+    height: 300px;
+}
+
+.personal-img-container {
+    height: 170px;
+    width: 170px;
+    margin: 0 auto;
+}
+
+.personal-img-container > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.personal-info-container {
+    width: 100%;
+    padding-top: 10px;
+}
+
+.personal-info-container > p, .personal-info-container > h5 {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.personal-info-container > h5 {
+    font-size: 18px;
+}
+
+.personal-info-title {
+    padding-bottom: 6px;
+}
+
+.personal-info-container > p.light {
+    font-size: 15px;
+    color: rgb(170, 169, 169);
 }
 
 
