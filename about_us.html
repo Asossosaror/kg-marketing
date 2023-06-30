@@ -13,9 +13,22 @@
 </head>
 <body>
     <main id="main">
+        <div id="overlay"></div>
         <header>
             <div class="nav-bar">
                 <img class="nav-bar-logo" src="images/logo.png" alt="Logotyp">
+                <div class="menu-icon">
+                    <span class="menu-span one"></span>
+                    <span class="menu-span two"></span>
+                    <span class="menu-span three"></span>
+                </div>
+                <div class="dropdown" id="dropdown">
+                    <div id="dropdown-content-container">
+                        <span><a class="nav-bar-a-tag blue" href="#">Hem</a></span>
+                        <span><a class="nav-bar-a-tag" href="contact_us.html">Kontakta oss</a></span>
+                        <span><a class="nav-bar-a-tag" href="about_us.html">Om oss</a></span>
+                    </div>
+                </div>
                 <nav class="nav-bar-links-container">
                     <span><a class="nav-bar-a-tag" href="index.html">Hem</a></span>
                     <span><a class="nav-bar-a-tag" href="contact_us.html">Kontakta oss</a></span>
@@ -23,6 +36,7 @@
                 </nav>
             </div>
         </header>
+        
         <div id="about-us-intro-container" class="intro-container">
             <div class="intro-half img" id="about-us-intro-img"></div>
             <div class="intro-half text" id="about-us-intro-text">

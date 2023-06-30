@@ -9,6 +9,10 @@ header {
     justify-content: center;
 }
 
+span {
+    user-select: none;
+}
+
 a.link {
     text-decoration: none;
     color: #1b4ac0;
@@ -722,7 +726,7 @@ p#contact-us-long-text {
 
 
 /* Responsive CSS for screens of different sizes */
-/* For tablets (width < ) */
+/* For tablets (width < 768px) */
 @media all and (max-width: 768px) {
     /* Change the navbar a-tags to an icon and a dropdown-menu */
     .nav-bar-links-container {
@@ -735,6 +739,14 @@ p#contact-us-long-text {
     
     /* Make the text part at the top take up the whole width (no image) */
     #home-intro-img {
+        display: none;
+    }
+
+    #contact-us-intro-img {
+        display: none;
+    }
+
+    #about-us-intro-img {
         display: none;
     }
 
@@ -760,5 +772,32 @@ p#contact-us-long-text {
 
     .nav-bar-logo {
         padding-left: 20px;
+    }
+
+    /* Contact us-page: Change the grids */
+    #contact-us-grid {
+        grid-template-columns: 1fr;
+        column-gap: 0;
+        row-gap: 50px;
+        width: calc(100% - 100px);
+        margin: 0 auto;
+    }
+
+    .contact-us-grid-half {
+        width: 100%;
+    }
+
+    #contact-us-info-inner-grid {
+        grid-template-columns: 1fr;
+        row-gap: 25px;
+    }
+
+    #contact-us-coworkers-container {
+        grid-template-columns: 1fr;
+        column-gap: 0;
+        row-gap: 50px;
+        width: fit-content;
+        margin: 0 auto;
+        padding-bottom: 100px;
     }
 }
