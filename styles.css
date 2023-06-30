@@ -70,26 +70,29 @@ a.link:hover {
     padding-left: 50px;
 }
 
+/* Dropdown menu */
 .menu-icon {
     width: fit-content;
     height: fit-content;
     margin: auto 0;
-    margin-right: 20px;
+    margin-right: 10px;
     cursor: pointer;
     position: absolute;
     display: flex;
     align-items: center;
     padding: 5px 0;
-    margin-top: 16px;
+    margin-top: 20.5px;
     left: calc(100% - 90px);
+    z-index: 10;
     display: none;
+    transform: translateX(30px);
 }
 
 .menu-span {
     position: absolute;
     display: block;
-    height: 5px;
-    width: 45px;
+    height: 3px;
+    width: 38px;
     border-radius: 4px;
     background-color: #141414;
     transform: rotate(0);
@@ -101,15 +104,15 @@ span.one {
 }
 
 span.two {
-    top: 14px;
+    top: 10px;
 }
 
 span.three {
-    top: 28px;
+    top: 20px;
 }
 
 .clicked .one{
-    transform: translateY(14px) rotate(45deg);
+    transform: translateY(10px) rotate(45deg);
 }
 
 .clicked .two{
@@ -117,7 +120,48 @@ span.three {
 }
 
 .clicked .three {
-    transform: translateY(-14px) rotate(-45deg);
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+#dropdown {
+    position: absolute;
+    z-index: 7;
+    height: 100vh;
+    width: 300px;
+    margin-left: calc(100%);
+    background-color: white;
+    transform: translateY(-64px) translateX(0);
+    transition: transform 200ms ease-in-out;
+}
+
+#dropdown.show {
+    transform: translateY(-64px) translateX(-300px);
+}
+
+#dropdown-content-container {
+    padding-top: 64px;
+}
+
+#dropdown-content-container > span {
+    display: block;
+    padding-bottom: 15px;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 2;
+    transition: background-color 200ms ease-in-out, transform 200ms ease-in-out;
+}
+
+#overlay.dark {
+    background-color: rgba(0, 0, 0, .5);
+    transform: translateX(-300px);
 }
 
 .nav-bar-links-container {
@@ -183,6 +227,7 @@ span.three {
 /* Introduction home page */
 #introduction-div {
     padding: 60px 0;
+    background-color: white;
 }
 
 #intro-h2-home {
@@ -291,6 +336,7 @@ span.three {
 #contact-form-outer-container {
     display: flex;
     justify-content: center;
+    background-color: white;
 }
 
 #contact-form-container {
@@ -710,5 +756,9 @@ p#contact-us-long-text {
 
     #home-division-img-container {
         height: 400px;
+    }
+
+    .nav-bar-logo {
+        padding-left: 20px;
     }
 }
