@@ -3,6 +3,7 @@ const main = document.querySelector('main');
 const icon = document.querySelector('.menu-icon');
 const dropdown = document.querySelector('#dropdown');
 const overlay = document.querySelector('#overlay');
+const imgTextBoxes = document.querySelectorAll('.grid-box-img-container');
 
 // Make the navigationg bar slightly transparent when it is scrolled down from it's original state.
 window.addEventListener('scroll', () => {
@@ -35,3 +36,34 @@ icon.addEventListener('click', () => {
     dropdown.classList.toggle("show");
     overlay.classList.toggle("dark");
 });
+
+// Change the class of the image with an overlay that is clicked.
+imgTextBoxes.forEach((element) => {
+    element.addEventListener("click", (event) => {
+        event.target.classList.toggle('clicked');
+        const pTagChild = event.target.querySelector('p');
+        if(pTagChild.classList.contains('show')) {
+            pTagChild.classList.remove('show');
+        } else {
+            setTimeout(() => {
+                pTagChild.classList.add('show');
+              }, 450);
+        }
+        console.log(event.target.id);
+        console.log(event.target.classList);
+    });
+});
+
+// Move the 'outlier'-img to the leftmost column of the timeline-grid.
+function moveOutlierDiv() {
+    const leftColumn = document.querySelector('#timeline-grid-column-left');
+    const rightColumn = document.querySelector('#timeline-grid-column-right');
+    const outlierDiv = document.querySelector('#grid-box-img-outlier');
+
+    if(window.innerWidth <= 768) {
+        rightColumn.prepend(outlierDiv);
+        leftColumn.appendChild(outlierDiv);
+    } else {
+        rightColumn.appendChild(outlierDiv);
+    }
+}
