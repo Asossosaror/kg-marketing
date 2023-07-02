@@ -58,12 +58,12 @@ imgTextBoxes.forEach((element) => {
 function moveOutlierDiv() {
     const leftColumn = document.querySelector('#timeline-grid-column-left');
     const rightColumn = document.querySelector('#timeline-grid-column-right');
-    const outlierDiv = document.querySelector('#grid-box-img-outlier');
+    const outlierDiv = document.querySelector('#grid-box-img-outlier-container');
 
     if(window.innerWidth <= 768) {
-        rightColumn.prepend(outlierDiv);
         leftColumn.appendChild(outlierDiv);
-    } else {
-        rightColumn.appendChild(outlierDiv);
+        rightColumn.removeChild(outlierDiv);
     }
 }
+
+moveOutlierDiv();
