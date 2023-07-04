@@ -61,6 +61,7 @@ a.link:hover {
     margin: auto 75px;
     background-color: white;
     position: fixed;
+    z-index: 6;
     transition: background-color 500ms ease-in-out;
 }
 
@@ -683,6 +684,10 @@ p#contact-us-long-text {
     display: none;
 }
 
+#grid-box-img-outlier-left-container {
+    display: none;
+}
+
 #timeline-grid-column-middle {
     width: 50px;
 }
@@ -707,7 +712,8 @@ p#contact-us-long-text {
 
 #timeline-arrow-img-container {
     width: 35px;
-    transform: translateY(-25px);
+    position: absolute;
+    transform: translateX(-16px) translateY(350px);
 }
 
 /* Our mission */
@@ -729,10 +735,34 @@ p#contact-us-long-text {
     line-height: 1.3rem;
     margin-bottom: 25px;
 }
-
+ 
 
 
 /* Responsive CSS for screens of different sizes */
+/* For medium and small laptops (width < 1200px) and (width < 910px)*/
+@media all and (max-width: 1200px) {
+    #timeline-grid-container {
+        grid-template-columns: 350px 50px 350px;
+        row-gap: 20px;
+        column-gap: 30px;
+        margin: 0 auto;
+    }
+
+    .grid-box-img-container img {
+        width: 100%;
+        height: 233px;
+    }
+}
+
+@media all and (max-width: 910px) {
+    #timeline-grid-container {
+        grid-template-columns: 300px 50px 300px;
+        row-gap: 20px;
+        column-gap: 20px;
+    }
+}
+
+
 /* For tablets (width < 768px) */
 @media all and (max-width: 768px) {
     /* Change the navbar a-tags to an icon and a dropdown-menu */
@@ -811,9 +841,10 @@ p#contact-us-long-text {
     /* About us-page: Change the grid of the timeline */
     #timeline-grid-container {
         display: grid;
+        width: fit-content;
         grid-template-columns: 500px 50px;
         row-gap: 10px;
-        column-gap: 70px;
+        column-gap: 10px;
         margin: 0 auto;
     }
 
@@ -824,19 +855,32 @@ p#contact-us-long-text {
     .grid-box-img-container {
         position: relative;
         width: 450px;
+        height: 300px;
         pointer-events: all;
         transition: opacity 200ms ease-in-out;
+    }
+
+    .grid-box-img-container img {
+        height: 100%;
     }
 
     .grid-box-img-container.clicked > .about-us-img-overlay-container {
         transform: translateY(-245px);
         border-radius: 20px 20px 0px 0px;
-        transition-delay: 200ms;
+        transition-delay: 0ms;
     }
 
     .grid-box-img-container.clicked > img {
         opacity: 1;
         pointer-events: none;
+    }
+
+    #grid-box-img-outlier-container {
+        display: none;
+    }
+
+    #grid-box-img-outlier-left-container {
+        display: block;
     }
 
     .about-us-img-overlay-container {
@@ -892,5 +936,157 @@ p#contact-us-long-text {
     .grid-box-img-container.clicked .white-transparent-overlay {
         height: 245px;
         transform: translateY(-4px);
+    }
+}
+
+/*For smaller tablets (width < 640px)*/
+@media all and (max-width: 640px) {
+    #timeline-container > h1 {
+        padding-top: 45px;
+        padding-bottom: 50px;
+    }
+
+    #timeline-grid-container {
+        grid-template-columns: 400px 50px;
+        column-gap: 30px;
+        margin-right: 20px;
+    }
+
+    .timeline-grid-box {
+        height: 350px;
+    }
+
+    .grid-box-img-container {
+        width: 400px;
+        height: 267px;
+    }
+
+    #timeline-arrow-img-container {
+        transform: translateX(-16px) translateY(300px);
+    }
+}
+
+@media all and (max-width: 540px) {
+    #timeline-grid-container {
+        grid-template-columns: 300px 50px;
+    }
+
+    .timeline-grid-box {
+        height: 260px;
+    }
+
+    .grid-box-img-container {
+        width: 300px;
+        height: 200px;
+    }
+
+    #timeline-arrow-img-container {
+        transform: translateX(-16px) translateY(210px);
+    }
+}
+
+/* For large phone (width < 430px)*/
+@media all and (max-width: 430px) {
+    .intro-half.text {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    #timeline-grid-container {
+        grid-template-columns: 250px 50px;
+        column-gap: 20px;
+    }
+
+    .timeline-grid-box {
+        height: 210px;
+    }
+
+    .grid-box-img-container {
+        width: 250px;
+        height: 167px;
+    }
+
+    .grid-box-img-container img {
+        border-radius: 15px;
+    }
+
+    .about-us-img-overlay-container {
+        border-radius: 0 0 15px 15px;
+    }
+
+    .about-us-img-overlay-container {
+        height: 50px;
+    }
+
+    .white-transparent-overlay {
+        border-radius: 0 0 15px 15px;
+    }
+
+    .grid-box-img-container.clicked > .about-us-img-overlay-container {
+        border-radius: 15px 15px 0px 0px;
+    }
+
+    .timeline-dot {
+        transform: translateY(50px);
+    }
+
+    #timeline-arrow-img-container {
+        transform: translateX(-16px) translateY(160px);
+    }
+}
+
+/*For medium phones (width < 375px)*/
+@media all and (max-width: 375px) {
+    #timeline-grid-container {
+        grid-template-columns: 230px 50px;
+        margin-right: 10px;
+    }
+
+    .timeline-grid-box {
+        height: 200px;
+    }
+
+    .grid-box-img-container {
+        width: 230px;
+        height: 153px;
+    }
+
+    .about-us-img-overlay-container {
+        height: 40px;
+    }
+
+    .about-us-img-overlay-container > h3 {
+        font-size: 18px;
+        margin-top: 8px;
+    }
+
+    .timeline-dot {
+        transform: translateY(40px);
+    }
+
+    #timeline-arrow-img-container {
+        transform: translateX(-16px) translateY(150px);
+    }
+}
+
+/*For small phones (320px < width < 340px)*/
+@media all and (max-width: 340px) {
+    #timeline-grid-container {
+        grid-template-columns: 210px 50px;
+        column-gap: 15px;
+        margin-right: 5px;
+    }
+
+    .timeline-grid-box {
+        height: 190px;
+    }
+
+    .grid-box-img-container {
+        width: 210px;
+        height: 133px;
+    }
+
+    #timeline-arrow-img-container {
+        transform: translateX(-16px) translateY(140px);
     }
 }
