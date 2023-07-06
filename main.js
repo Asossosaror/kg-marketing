@@ -54,16 +54,41 @@ imgTextBoxes.forEach((element) => {
     });
 });
 
-// Move the 'outlier'-img to the leftmost column of the timeline-grid.
-function moveOutlierDiv() {
-    const leftColumn = document.querySelector('#timeline-grid-column-left');
-    const rightColumn = document.querySelector('#timeline-grid-column-right');
-    const outlierDiv = document.querySelector('#grid-box-img-outlier-container');
-
-    if(window.innerWidth <= 768) {
-        leftColumn.appendChild(outlierDiv);
-        rightColumn.removeChild(outlierDiv);
-    }
+// Make the text next to the timeline display as an opaque, white rectangle when the image is clicked.
+// The issue is that a height of 'fit-content' can't be transitioned smoothly in CSS.
+function defineOriginalHeight() {
+    textOverlayOriginalHeight = document.getElementById('about-us-img-overlay-container1').style.height;
 }
 
-moveOutlierDiv();
+window.onload = defineOriginalHeight;
+
+function transitionTextAboutUs(textContainerID) {
+    // If the window is less wide than 540px:
+    if(window.innerWidth <= 540) {
+        // Get the height of the text container if it is not inhibited.
+        var textContainer = document.getElementById(textContainerID);
+        console.log(textContainer.id);
+        var sectionHeight = textContainer.scrollHeight;
+        console.log(sectionHeight);
+
+        if(textContainer.classList.contains("expanded") == false) {
+            requestAnimationFrame(function() {
+                textContainer.style.height = textOverlayOriginalHeight + 'px';
+                textContainer.style.transitionDelay = '200ms';
+                textContainer.style.transitionProperty = 'height';
+                textContainer.style.transitionDuration = '200ms';
+                textContainer.style.transitionTimingFunction = 'ease-in-out';
+                textContainer.classList.remove('expanded');
+            })
+        } else {
+            requestAnimationFrame(function() {
+                textContainer.style.height = sectionHeight + 'px';
+                textContainer.style.transitionDelay = '200ms';
+                textContainer.style.transitionProperty = 'height';
+                textContainer.style.transitionDuration = '200ms';
+                textContainer.style.transitionTimingFunction = 'ease-in-out';
+                textContainer.classList.add('expanded');
+            })
+        }
+    }
+}
