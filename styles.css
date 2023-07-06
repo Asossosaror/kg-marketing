@@ -161,7 +161,7 @@ span.three {
     height: 100%;
     pointer-events: none;
     background-color: rgba(0, 0, 0, 0);
-    z-index: 2;
+    z-index: 4;
     transition: background-color 200ms ease-in-out, transform 200ms ease-in-out;
 }
 
@@ -892,7 +892,7 @@ p#contact-us-long-text {
         bottom: 0;
         background-color: white;
         color: black;
-        z-index: 5;
+        z-index: 3;
         pointer-events: none;
         transition: border-radius 200ms ease-in-out, transform 200ms ease-in-out;
     }
@@ -928,7 +928,7 @@ p#contact-us-long-text {
         bottom: 0;
         transform: translateY(-4px);
         background-color: rgba(255, 255, 255, .5);
-        z-index: 4;
+        z-index: 2;
         pointer-events: none;
         transition: all 460ms ease-in-out;
     }
